@@ -1,52 +1,146 @@
 <!DOCTYPE html>
 <html lang="ko">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>지안이의 성장일기 - 개인정보처리방침</title>
+    <title>지안이의 성장일기 - 우리 아이 첫 성장 기록</title>
     <style>
-        body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; line-height: 1.6; color: #333; max-width: 800px; margin: 40px auto; padding: 0 20px; }
-        h1 { font-size: 24px; border-bottom: 2px solid #FDDAC4; padding-bottom: 10px; color: #1e293b; }
-        h2 { font-size: 18px; margin-top: 30px; color: #0f172a; }
-        p, li { font-size: 14px; color: #475569; }
-        .footer { margin-top: 50px; font-size: 12px; color: #94a3b8; border-top: 1px solid #e2e8f0; padding-top: 20px; }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #FAF8F5;
+            color: #1E293B;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: auto;
+            padding: 40px 20px;
+            text-align: center;
+        }
+
+        .logo {
+            width: 140px;
+            height: 140px;
+            border-radius: 36px;
+            box-shadow: 0 10px 25px rgba(253, 218, 196, 0.4);
+            margin-bottom: 24px;
+            border: 4px solid #FFF;
+        }
+
+        h1 {
+            font-size: 32px;
+            font-weight: 800;
+            color: #0F172A;
+            margin: 0 0 16px 0;
+            letter-spacing: -0.5px;
+        }
+
+        p {
+            font-size: 16px;
+            color: #64748B;
+            margin: 0 0 40px 0;
+            line-height: 1.6;
+        }
+
+        .highlight {
+            color: #F87171;
+            font-weight: 700;
+        }
+
+        .badge-container {
+            display: flex;
+            justify-content: center;
+            gap: 16px;
+            flex-wrap: wrap;
+            margin-bottom: 60px;
+        }
+
+        .badge {
+            background-color: #0F172A;
+            color: #FFF;
+            padding: 14px 28px;
+            border-radius: 30px;
+            font-size: 14px;
+            font-weight: 700;
+            text-decoration: none;
+            box-shadow: 0 4px 12px rgba(15, 23, 42, 0.15);
+            transition: transform 0.2s;
+        }
+
+        .badge:hover {
+            transform: translateY(-2px);
+        }
+
+        .badge.google {
+            background-color: #4F46E5;
+        }
+
+        .footer {
+            margin-top: auto;
+            padding: 30px 20px;
+            background-color: #FFF;
+            border-top: 1px solid #E2E8F0;
+            text-align: center;
+        }
+
+        .footer-links {
+            display: flex;
+            justify-content: center;
+            gap: 24px;
+            margin-bottom: 12px;
+        }
+
+        .footer-links a {
+            color: #475569;
+            text-decoration: none;
+            font-size: 13px;
+            font-weight: 500;
+        }
+
+        .footer-links a:hover {
+            color: #0F172A;
+            text-decoration: underline;
+        }
+
+        .copyright {
+            font-size: 12px;
+            color: #94A3B8;
+        }
     </style>
 </head>
+
 <body>
-    <h1>개인정보처리방침</h1>
-    <p>본 방침은 "지안이의 성장일기" 모바일 애플리케이션(이하 "앱")이 제공하는 서비스 이용과 관련하여 이용자의 개인정보를 어떻게 수집, 이용, 보호하는지 설명합니다.</p>
+    <div class="container">
+        <!-- 앱 로고 -->
+        <img class="logo" src="./assets/images/ios-icon.png" alt="지안이의 성장일기 로고">
 
-    <h2>1. 수집하는 개인정보 항목 및 수집방법</h2>
-    <p>앱은 이용자가 구글 로그인을 진행할 때 구글로부터 다음 최소한의 정보를 수집합니다.</p>
-    <ul>
-        <li>수집 항목: 이메일 주소, 프로필 이름(닉네임), 프로필 사진</li>
-        <li>수집 방법: 구글 OAuth 로그인 연동을 통한 동의 후 수집</li>
-    </ul>
+        <h1>지안이의 성장일기 👶🍼</h1>
+        <p>우리 소중한 아기의 <span class="highlight">하루 패턴, 소중한 기록, 성장 달력</span>까지!<br>엄마와 아빠가 함께 기록하고 공유하는 가장 따뜻한 아기 일기장입니다.
+        </p>
 
-    <h2>2. 개인정보의 이용 목적</h2>
-    <p>수집된 개인정보는 다음의 목적으로만 이용됩니다.</p>
-    <ul>
-        <li>사용자 식별 및 회원 가입/관리</li>
-        <li>아기 성장 일기, 메모, 패턴 알람 스케줄 등 사용자 데이터 동기화</li>
-    </ul>
+        <!-- 다운로드 뱃지 예시 -->
+        <div class="badge-container">
+            <a href="#" class="badge"> App Store에서 받기</a>
+            <a href="#" class="badge google">▶ Google Play에서 받기</a>
+        </div>
+    </div>
 
-    <h2>3. 개인정보의 보유 및 파기</h2>
-    <p>이용자가 서비스 탈퇴를 요청하거나 구글 계정 연동을 해제하는 경우, 또는 서비스가 종료되는 시점에 이용자의 개인정보 및 일기/사진 데이터를 지체 없이 파기합니다.</p>
-
-    <h2>4. 제3자 제공 및 위탁</h2>
-    <p>앱은 이용자의 개인정보를 제3자에게 제공하거나 외부 기관에 위탁하지 않습니다. 단, 데이터 동기화를 위해 백엔드 클라우드 인프라(Appwrite) 환경을 사용합니다.</p>
-
-    <h2>5. 이용자의 권리 및 의무</h2>
-    <p>이용자는 언제든지 앱 내 설정을 통해 탈퇴를 요청하고 수집된 정보를 삭제할 수 있는 권리를 가집니다.</p>
-
-    <h2>6. 개인정보 보호책임자 및 문의</h2>
-    <p>서비스 이용 중 발생하는 개인정보 관련 문의사항은 아래 연락처로 연락해 주시기 바랍니다.</p>
-    <ul>
-        <li>이메일: (여기에 사용자 본인의 이메일 주소를 입력하세요)</li>
-    </ul>
-
+    <!-- 하단 푸터 (개인정보처리방침 링크 탑재) -->
     <div class="footer">
-        <p>시행일자: 2026년 6월 30일</p>
+        <div class="footer-links">
+            <a href="./privacy.html">🔒 개인정보처리방침</a>
+            <a href="#">📝 이용약관</a>
+        </div>
+        <div class="copyright">
+            &copy; 2026 지안이의 성장일기. All rights reserved.
+        </div>
     </div>
 </body>
+
 </html>
