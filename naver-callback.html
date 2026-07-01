@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>지안이의 성장일기 - 네이버 로그인</title>
+</head>
+
+<body
+    style="display: flex; justify-content: center; align-items: center; height: 100vh; flex-direction: column; font-family: sans-serif; background-color: #f9f9f9; margin: 0;">
+
+    <h2 style="color: #03C75A; margin-bottom: 8px;">지안이의 성장일기</h2>
+    <p style="color: #666;">네이버 로그인 인증 중입니다. 잠시 후 앱으로 이동합니다...</p>
+
+    <script>
+        // 1. 네이버가 주소창 뒤에 붙여준 ?code=xxx 와 &state=xxx 가져오기
+        const params = new URLSearchParams(window.location.search);
+        const code = params.get('code');
+        const state = params.get('state');
+
+        if (code) {
+            // 2. 내 앱의 순수 딥링크 주소 조립 (state 값도 함께 넘겨줍니다)
+            const appProjectId = '6a30d14400362ff7b204';
+            const appUrl = 'appwrite-callback-' + appProjectId + '://?code=' + code + (state ? '&state=' + state : '');
+
+            console.log('아이폰 앱으로 네이버 딥링크 이동 시도:', appUrl);
+
+            // 3. 브라우저가 준비되면 아이폰 앱 강제 깨우기 실행
+            setTimeout(function () {
+                window.location.href = appUrl;
+            }, 100);
+        } else {
+            // 네이버 로그인 취소 또는 에러 발생 시
+            const errorDesc = params.get('error_description') || '인증 코드가 올바르지 않습니다.';
+            document.querySelector('p').innerText = '네이버 로그인 에러: ' + errorDesc;
+        }
+    </script>
+</body>
+
+</html>
